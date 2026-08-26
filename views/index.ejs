@@ -1,1 +1,19 @@
-<h1><%= title %></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <a href="/new">New Message</a>
+
+    <% messages.forEach(function(message) { %>
+        <div>
+            <h3><%= message.text %></h3>
+            <p>By <%= message.user %> on <%= message.added.toDateString() %></p>
+        </div>
+    <% }) %>
+</body>
+</html>
